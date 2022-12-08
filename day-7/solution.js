@@ -11,12 +11,6 @@ for(let i = 0; i < input.length; i++){
     }
 }
 
-for(let i = 1; i < input.length; i++){
-    if (input[i].split(' ')[0] === '$' && input[i].split(' ')[1] === 'ls'){ 
-        // ls(input, i, input[i-1].split(' ')[0])
-    }
-}
-
 // console.log(fileSystem)
 
 // console.log(Object.keys(fileSystem))
@@ -42,6 +36,7 @@ let testArr = ['simulating child directory']
 let testName = 'simulating directory name'
 
 // child directory: from CD/LS to next $
+console.log(fileSystem)
 
 function count(dir){ // dir is the directory we are looking for
     for(let i = 0; i < input.length; i++){
@@ -64,13 +59,19 @@ function count(dir){ // dir is the directory we are looking for
             }
             for(let j = 0; j < theArr.length; j++){
                 if(parseInt(theArr[j].split(' ')[0]) > 0){
-                    fileSystem[dir] += parseInt(theArr[j].split(' ')[0])
-                    console.log(parseInt(theArr[j].split(' ')[0]))
-                    console.log(theArr[j])
+                    console.log(`adding ${parseInt(theArr[j].split(' ')[0])} to ${input[i].split(' ')[2]}`)
+                    fileSystem[input[i].split(' ')[2]] += parseInt(theArr[j].split(' ')[0])
+                    return parseInt(theArr[j].split(' ')[0])
+                    // outside = parseInt(theArr[j].split(' ')[0])
+                    // console.log(`${fileSystem[dir]} is input dir`)
                 } else if (theArr[j].split(' ')[0] === 'dir') {
-                    count(theArr[j].split(' ')[0])
+                    console.log(fileSystem)
+                    fileSystem[dir] = fileSystem[dir] + count(theArr[j].split(' ')[0])
+                    // count(theArr[j].split(' ')[0])
+                    // fileSystem[dir] += outside
                 } else {
                     console.log(theArr)
+                    console.log('line 71')
                 }
             }
         }
@@ -91,4 +92,3 @@ function count(dir){ // dir is the directory we are looking for
 
 Object.keys(fileSystem).forEach(element => count(element))
 console.log(fileSystem)
-console.log(parseInt('dir'))

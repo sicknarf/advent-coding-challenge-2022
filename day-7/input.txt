@@ -1,11 +1,11 @@
 $ cd /
 $ ls
 dir ctd
-80649 mwcj.pmh
-212527 nbb.ztq
+1 mwcj.pmh
+10 nbb.ztq
 dir pgqmwn
-152170 scr.smr
-17637 snqcgbs.nhv
+100 scr.smr
+1000 snqcgbs.nhv
 dir tmw
 dir vtm
 $ cd ctd
@@ -22,4 +22,4 @@ $ cd rng
 $ ls
 dir jncpmzcs
 dir pttvmghm
-293353 qcjbfggw.tjj
+10000 qcjbfggw.tjj
