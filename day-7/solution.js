@@ -11,31 +11,8 @@ for(let i = 0; i < input.length; i++){
     }
 }
 
-// console.log(fileSystem)
-
-// console.log(Object.keys(fileSystem))
-
-// function ls(array, iterator, directoryName){ 
-//     for (let j = iterator; j < array.length; j++){
-//         if(array[j].split(' '[0] === '$')){
-//             break
-//         }
-//         if(array[j].split(' '[0] === 'dir')){
-//             myDirectory = array[j].split(' '[1])
-//         }
-//     }
-//     for (let i = 0; i < array.length; i++){
-//         if(array[i].split(' '[0] === 'cd') && array[i].split(' '[1] === myDirectory)){
-
-//         }
-//     }
-// }
-
-let myArr = ['simulating input']
-let testArr = ['simulating child directory'] 
-let testName = 'simulating directory name'
-
-// child directory: from CD/LS to next $
+console.log(fileSystem)
+Object.keys(fileSystem).forEach(element => count(element))
 console.log(fileSystem)
 
 function count(dir){ // dir is the directory we are looking for
@@ -45,9 +22,6 @@ function count(dir){ // dir is the directory we are looking for
         // array-ify it until we hit $
         // call count(dir) again if there is a dir ____ in the array
         // if no dir - count the numbers
-        // if(input[i].split(' ')[1]==='cd'){
-            //     console.log(input[i].split(' ')[2])
-            // }
             if(input[i].split(' ')[1] === 'cd' && input[i].split(' ')[2] === dir){
                 let theArr = []
             for(let j = i+2; j < input.length; j++){
@@ -75,20 +49,8 @@ function count(dir){ // dir is the directory we are looking for
                 }
             }
         }
-        
-        // if(parseInt(theArr.split(' ')[0]) > 0){
-        //     fileSystem[dir] += parseInt(testArr.split(' ')[0])
-        //     fileSystem[testName] += parseInt(testArr.split(' ')[0])
-        // }
-        // if(theArr.split(' ')[0] === 'dir'){
-        //     count(theArr.split(' ')[1])
-        // }
+    
     }
 }
 
-// for(let i = 0; i < Object.keys(fileSystem).length; i++){
-//     count(Object.keys(fileSystem)[i])
-// }
 
-Object.keys(fileSystem).forEach(element => count(element))
-console.log(fileSystem)
