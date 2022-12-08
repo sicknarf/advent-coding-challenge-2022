@@ -43,8 +43,8 @@ function count(dir) {
                     fileSystem[dir] = fileSystem[dir] + count(theArr[j].split(" ")[0]);
                     // count(theArr[j].split(' ')[0])
                 } else {
-                console.log(theArr);
-                console.log("error line 47");
+                    console.log(theArr);
+                    console.log("error line 47");
                 }
             }
         }
