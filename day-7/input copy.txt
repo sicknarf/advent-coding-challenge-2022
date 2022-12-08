@@ -1,0 +1,23 @@
+$ cd /
+$ ls
+dir a
+1 b.txt
+10 c.dat
+dir d
+$ cd a
+$ ls
+dir e
+100 f
+1000 g
+10000 h.lst
+$ cd e
+$ ls
+100000 i
+$ cd ..
+$ cd ..
+$ cd d
+$ ls
+1000000 j
+10000000 d.log
+100000000 d.ext
+1000000000 k
