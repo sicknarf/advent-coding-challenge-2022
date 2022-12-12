@@ -37,7 +37,6 @@ Maybe you can learn something by looking at the value of the X register througho
 <details>
 <summary>For example, consider this larger program:</summary>
 <br>
-```
 addx 15
 addx -11
 addx 6
@@ -184,7 +183,7 @@ addx -11
 noop
 noop
 noop
-```
+
 </details>
 
 The interesting signal strengths can be determined as follows:
